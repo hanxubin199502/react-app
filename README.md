@@ -2,19 +2,34 @@ react环境搭建及其项目的启动 打包部署
 
 
 
-1.首先准备的东西
-a.安装node js（下载安装node 一路回车就可以）
-b.安装npm（因为国内使用npm很慢所以需要安装cnpm）
-c.安装cnpm（npm install -g cnpm --registry=https://registry.npm.taobao.org）
+ - 1.首先准备的东西
+ - a.安装node js（下载安装node 一路回车就可以）
+ - b.安装npm（因为国内使用npm很慢所以需要安装cnpm）
+ - c.安装cnpm（npm install -g cnpm --registry=https://registry.npm.taobao.org）
 说明：检测自己是否安装node npm cnpm使用node -v， npm -v，cnpm -v
 
-2.搭建环境
-a.开始搭建自己react项目的环境，找到自己需要放项目的文件夹（新建一个文件夹即可） 例：F：\reactapp -> 地址栏中   输入cmd出现命令框
-b.执行cnpm install -g create-react-app（是全局安装）
-c.执行 create-react-app react_app(项目名称)
-d.在这里重点说明一下创建自己项目的时候有可能会报错Unexpected end of JSON input while parsing near '....0","dependencies":{"' 也有可能不报错，如果报错的话就执行npm cache clean --force
-e.走到这一步项目就已经创建完成了只需要找到项目的根目录执行 npm start启动项目就ok了
+ - 2.搭建环境
+ - a.开始搭建自己react项目的环境，找到自己需要放项目的文件夹（新建一个文件夹即可） 例：F：\reactapp -> 地址栏中   输入cmd出现命令框
+ - b.执行cnpm install -g create-react-app（是全局安装）
+ - c.执行 create-react-app react_app(项目名称)
+ - d.在这里重点说明一下创建自己项目的时候有可能会报错Unexpected end of JSON input while parsing near '....0","dependencies":{"' 也有可能不报错，如果报错的话就执行npm cache clean --force
+ - e.走到这一步项目就已经创建完成了只需要找到项目的根目录执行 npm start启动项目就ok了
 
-3.启动项目执行npm start 
+ - 3.启动项目执行npm start 
 
-4.编译打包执行 npm run build
+ - 4.编译打包执行 npm run build
+
+ - 5.将本地项目和github仓库相关联并上传项目
+ - a.登录自己的github库，点击右上角加号选择 New repository新建仓库，在Repository name栏下填写项目名称，选择开放或者隐私，最后点击Create repository创建仓库完成，号外 号外 号外重要的事情说三遍 记住ssh后面的地址记得复制后面会用到
+ - b.找到自己搭建的项目的根目录 鼠标右击选择 git bash here
+ - c.执行 git init
+ - d.再执行 git add .
+ - e.再再执行git commit -m '备注信息'
+ - f.再再再执行git remote add origin 你复制的地址（上面说到的这里用到了说明：这里执行的目的是将本地和仓库进行关联）
+ - g.最后一步就是将本地代码推到仓库执行 git push -u origin master(这里是你需要推的分支，默认是master分支)
+
+ - 6.本地项目的上传与拉取
+ - a.git pull （拉取项目）
+ - b.git add -A (合并代码)
+ - c.git commit -m '备注信息'
+ - d.git push -u origin master (将代码推到远程仓库)
