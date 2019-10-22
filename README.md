@@ -35,6 +35,10 @@
  - b.git add -A (合并代码)
  - c.git commit -m '备注信息'
  - d.git push -u origin master (将代码推到远程仓库)
+ - e.git diff 查看改变
+ - f.git status 查看状态
+ - g.git remote -v 查看本地与远程仓库关联的地址
+ - h.git remote rm origin 地址 移出本地与远程仓库的关联
  
  # - 7.前端最常用的集中编辑器
  - a.Sublime Text3（这个对于前端的初学者非常之好用，简单，自带汉化包，不需要安装任何插件）
